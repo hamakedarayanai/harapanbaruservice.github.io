@@ -1,0 +1,152 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background-color: #ffffff; /* Fallback color for light mode */
+  color: #333333; /* Fallback text color for light mode */
+  line-height: 1.6;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #b0b0b0;
+}
+
+/* Navbar */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #b0b0b0;
+  transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Header & Navigation */
+header {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+  transition: transform 0.3s ease-in-out, filter 0.3s;
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #444444;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(90%);
+  background-color: #222222;
+}
+
+/* Forms */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.form-control {
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.form-control:focus {
+  background: #222222;
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #181818;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional Layout Styles */
+main {
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .form-container {
+    padding: 15px;
+  }
+}
